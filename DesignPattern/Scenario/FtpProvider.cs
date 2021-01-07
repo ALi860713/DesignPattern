@@ -4,7 +4,7 @@ using System.Text;
 
 namespace SimpleFactory.Scenario
 {
-    internal class FtpProvider
+    internal class FtpProvider : ITcpCommunicationProvider
     {
         public void UploadFile()
         {
