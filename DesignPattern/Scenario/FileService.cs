@@ -8,13 +8,13 @@ namespace SimpleFactory.Scenario
     {
         public void Upload()
         {
-            var ftpServer = new FtpProvider();
+            var ftpServer = TcpCommunicationFactory.GetProvider();
             ftpServer.UploadFile();
         }
 
         public void Send()
         {
-            var ftpServer = new FtpProvider();
+            var ftpServer = TcpCommunicationFactory.GetProvider();
             ftpServer.SendFile();
         }
     }
