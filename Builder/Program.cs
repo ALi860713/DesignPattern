@@ -7,7 +7,7 @@ namespace Builder
     {
         private static void Main(string[] args)
         {
-            var hotel = new Hotel();
+            var hotel = new Hotel("HotelA");
             var vocation = new ThreeDayVocationBuilder()
                 .SetBeginDate("2018/01/01")
                 .SetEndDate("2018/01/03")
@@ -86,9 +86,16 @@ namespace Builder
 
     public class Restaurant
     {
+        public Restaurant(string name)
+        {
+        }
     }
 
     public class Hotel
     {
+        public Hotel(string name)
+        {
+            
+        }
     }
 }
