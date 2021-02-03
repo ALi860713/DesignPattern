@@ -6,9 +6,9 @@ namespace Factory
     {
         static void Main(string[] args)
         {
-            var storeACommunication = new StoreACommunicationFactory().CreateCommunication();
+            var storeACommunication = new TcpCommunicationFactory().CreateCommunication();
             storeACommunication.ConnectToNetwork();
-            var storeBCommunication = new StoreBCommunicationFactory().CreateCommunication();
+            var storeBCommunication = new UdpCommunicationFactory().CreateCommunication();
             storeBCommunication.ConnectToNetwork();
         }
     }
@@ -18,14 +18,14 @@ namespace Factory
         ICommunication CreateCommunication();
     }
 
-    public class StoreACommunicationFactory : ICommunicationFactory
+    public class TcpCommunicationFactory : ICommunicationFactory
     {
         public ICommunication CreateCommunication()
         {
             return new TcpCommunication();
         }
     }
-    public class StoreBCommunicationFactory : ICommunicationFactory
+    public class UdpCommunicationFactory : ICommunicationFactory
     {
         public ICommunication CreateCommunication()
         {
